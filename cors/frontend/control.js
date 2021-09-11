@@ -1,7 +1,7 @@
 function onGet(version) {
     const url = "http://localhost:8000/api/" + version + "/messages";
     var headers = {}
-    
+    console.log("Frontend GETTING:", version);
     fetch(url, {
         method : "GET",
         mode: 'cors',
@@ -24,7 +24,7 @@ function onGet(version) {
 function onPut(version) {
     const url = "http://localhost:8000/api/" + version + "/messages/0";
     var headers = {}
-
+    console.log("frontend PUTTING:", version);
     fetch(url, {
         method : "PUT",
         mode: 'cors',
