@@ -23,7 +23,8 @@ function onGet(version) {
 
 function onPut(version) {
     const url = "http://localhost:8000/api/" + version + "/messages/0";
-    var headers = {}
+    // var headers = {}
+    let headers = { "X-Token": "abcd1234" }
     console.log("frontend PUTTING:", version);
     fetch(url, {
         method : "PUT",
