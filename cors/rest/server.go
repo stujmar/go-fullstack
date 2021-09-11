@@ -18,6 +18,7 @@ var messages []string
 
 func OptionMessage(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "http://localhost:8080")
+	c.Header("Access-Control-Allow-Methods", "GET, OPTIONS, POST, PUT")
 }
 
 func GetMessages(c *gin.Context) {
