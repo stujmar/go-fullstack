@@ -38,6 +38,7 @@ func PutMessage(c *gin.Context) {
 	messages[id] = text
 	if version == "v2" {
 	    c.Header("Access-Control-Allow-Origin", "http://localhost:8080")
+		c.Header("Access-Control-Expose-Headers", "X-Custom")
 	}
 	c.Header("X-Custom", "123456789")
 	c.JSON(http.StatusOK, gin.H{"messages": messages})
